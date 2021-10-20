@@ -94,7 +94,7 @@ def main(start, end, step):
 
     plt.plot(x, y, linewidth=1)
     deg = (max_dev*180)/pi
-    legends.append(f'$ \Omega$: {omega}; d: {round(deg, 4)}')
+    legends.append(f'$ \Omega$: {omega}; $ \Delta $: {round(deg, 4)} $ \degree $')
 
     plt.xlabel("t", fontsize=20)
     plt.ylabel(r"$ \phi(t)$", fontsize=20)

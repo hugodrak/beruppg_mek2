@@ -1,4 +1,6 @@
 #! /usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
 from scipy.integrate import solve_ivp
 import matplotlib.pyplot as plt
@@ -47,7 +49,7 @@ def solver(tend):
     # time end
     #tend = 15
 
-    sol = solve_ivp(H, [0, tend], phi0, method='Radau', t_eval=np.linspace(0, tend, 50*tend))
+    sol = solve_ivp(H, [0, tend], phi0, method='Radau', t_eval=np.linspace(0, tend, 20*tend))
 
     return sol
 
@@ -78,4 +80,4 @@ def main(start, end, step, tend, title):
     plt.show()
 
 main(100, 101, 1, 10, "Part 1")
-main(90.82, 90.86, .01, 26, "Part 2")
+main(90.837, 90.841, .001, 200, "Part 2")
